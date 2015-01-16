@@ -1,0 +1,14 @@
+.partyItems {
+    margin: 20px 0 0 0;
+}
+
+.partyItems .row {
+    border: 1px solid #E5E5E5;
+    background: #EAEAEA;
+    padding: 20px;
+    margin: 20px;
+}
+
+.addItemContainer {
+    height: 50px;
+}

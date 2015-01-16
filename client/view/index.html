@@ -1,0 +1,42 @@
+<head>
+    <title>PartyOrganizer</title>
+    <meta charset="utf-8" />
+</head>
+
+<body></body>
+
+<template name="manageItems">
+    <div class="container">
+        <h1>PartyOrganizer</h1>
+        {{#with partyData}}
+            <p class="publicLink">Der Link: <span class="partyLink">{{urlFor route='partyLink'}}</span></p>
+        {{/with}}
+        <div class="addItemContainer">
+            <div class="col-md-10">
+                <input type="text" name="addItem" class="form-control" placeholder="z.B. Chips, Filme, Limetten" id="addItem" autofocus />
+            </div>
+            <button class="btn btn-primary btn-addItem col-md-2">Brauchen wir!</button>
+        </div>
+        <div class="partyItems">
+            {{#each items}}
+                <div class="item row">
+                    <div class="col-md-6">
+                        {{name}}
+                    </div>
+                    {{#if responsible}}
+                        <div class="col-md-6">
+                            <img src="{{gravatar responsible.email}}" alt="userimage" />
+                            {{responsible.email}}
+                        </div>
+                    {{else}}
+                    <div class="col-md-6">
+                        <button class="btn btn-success btn-illbringit">Mich eintragen!</button>
+                    </div>
+                    {{/if}}
+                </div>
+            {{else}}
+                <!-- hier könnte eine nachricht stehen -->
+            {{/each}}
+        </div>
+    </div>
+</template>
