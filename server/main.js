@@ -6,7 +6,6 @@ Meteor.publish("items", function(partyId) {
     return items.find({partyId: partyId});
 });
 
-
 Meteor.methods({
     'addItem': function(partyId, itemName) {
         check(partyId, String);

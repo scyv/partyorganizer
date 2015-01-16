@@ -5,7 +5,20 @@
 
 <body></body>
 
+<template name="tollesTemplate">
+    Hallo das ist mein neues Template
+
+    {{#with irgendwelcheDaten}}
+        {{data1}}
+        {{data2}}
+    {{/with}}
+</template>
+
+
 <template name="manageItems">
+
+    {{> tollesTemplate}}
+
     <div class="container">
         <h1>PartyOrganizer</h1>
         {{#with partyData}}

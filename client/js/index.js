@@ -20,6 +20,7 @@ Template.manageItems.events({
         var newItem = $('#addItem').val();
         var partyId = Session.get('partyId');
         console.log(newItem);
+
         Meteor.call('addItem', partyId, newItem, function(err) {
             if (err) {
                 alert(err);
